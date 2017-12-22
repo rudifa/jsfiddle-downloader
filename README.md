@@ -76,13 +76,11 @@ In all above examples, the default generated filename will be `<fiddle-id>.html`
 
 You can make the filenames more informative with these options:
 
-`-I` : `<fiddle-id>.html` (identifier, same as default)
-
 `-T` : `<fiddle-title>.html` (title given to the fiddle to make it public)
 
 `-IT`: `<fiddle-id>_<fiddle-title>.html` (combined identifier and title)
 
-`-S` : replaces any spaces in the title by underscores `_`
+`-S` : Keep spaces in filename (default: replace by underscores)
 
 **Tests:**
 
