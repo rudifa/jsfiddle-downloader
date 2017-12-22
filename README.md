@@ -84,13 +84,9 @@ You can make the filenames more informative with these options:
 
 **Tests:**
 
-In the project directory `jsfiddle-downloader` create the symbolic link
-
-`ln -s bin/jsfiddle-downloader.js jsfiddle-downloader`
-
-and run tests found in `test/test.js` with
+In the project directory `jsfiddle-downloader` run
 
 `mocha test [--keep]`
 
-If you run tests with option `--keep`, the html files downloaded during tests will be
-preserved for inspection.
+If you run tests with option `--keep`, the temporary directories containing
+html files downloaded during tests will be preserved for inspection.
