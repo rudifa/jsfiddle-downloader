@@ -1,5 +1,5 @@
 # jsfiddle-downloader
-[![npm version](https://badge.fury.io/js/jsfiddle-downloader.svg)](https://badge.fury.io/js/jsfiddle-downloader) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/facundovictor/jsfiddle-downloader/master/LICENSE) [![Total Downloads](https://img.shields.io/npm/dt/jsfiddle-downloader.svg)](https://npm-stat.com/charts.html?package=jsfiddle-downloader)
+[![Build Status](https://travis-ci.org/facundovictor/jsfiddle-downloader.svg?branch=master)](https://travis-ci.org/facundovictor/jsfiddle-downloader) [![npm version](https://badge.fury.io/js/jsfiddle-downloader.svg)](https://badge.fury.io/js/jsfiddle-downloader) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/facundovictor/jsfiddle-downloader/master/LICENSE) [![Total Downloads](https://img.shields.io/npm/dt/jsfiddle-downloader.svg)](https://npm-stat.com/charts.html?package=jsfiddle-downloader)
 
 Download fiddles from jsFiddle.net, just using a NodeJS script and save it as a single HTML file.
 
@@ -14,9 +14,9 @@ Download fiddles from jsFiddle.net, just using a NodeJS script and save it as a 
 **How to use it**:
 
 ```
-    Usage: node jsfiddle-downloader [options]
+  Usage: jsfiddle-downloader [options]
 
-    Options:
+  Options:
 
         -h, --help                        output usage information
         -V, --version                     output the version number
@@ -62,6 +62,18 @@ It'll download all backups in the currrent directory, the jsFiddles scripts will
   [<output-folder>/]<id-fiddle>.html
 ```
 
+To save the files using the fiddle's title, provide the parameter `-T`:
+
+```
+  jsfiddle-downloader -T -u <user> [-o <output file>]
+```
+
+It'll download all backups in the currrent directory, the jsFiddles scripts will be named as:
+
+```
+  [<output-folder>/]<title-fiddle>.html
+```
+
 To avoid running a local server for resolving URIs that doesn't have an URI method defined. Use the `-f` parameter:
 
 ```
@@ -71,8 +83,6 @@ To avoid running a local server for resolving URIs that doesn't have an URI meth
 ```
 
 This will replace all the `http://` in the href of link tags and in the src of script tags.
-
-In all above examples, the default generated filename will be `<fiddle-id>.html`.
 
 You can make the filenames more informative with these options:
 
